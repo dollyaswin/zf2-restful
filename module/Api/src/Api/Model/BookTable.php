@@ -50,7 +50,6 @@ class BookTable extends AbstractTableGateway
             try {
                 $this->insert($data);
             } catch (\Zend\Db\Adapter\Exception\InvalidQueryException $e) {
-                //throw new \Exception($e->getPrevious()->getMessage());
 	            throw $e->getPrevious();
             }
         } else {
@@ -58,7 +57,6 @@ class BookTable extends AbstractTableGateway
                 $this->update($data, array('id' => $id));
 	        } catch (\Zend\Db\Adapter\Exception\InvalidQueryException $e) {
 	            throw $e->getPrevious();
-                //throw new \Exception($e->getPrevious()->getMessage());
 	        }
         }
     }
