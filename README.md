@@ -4,9 +4,11 @@ ZF2-Restful
 Introduction
 ------------
 This is a simple, skeleton application using the ZF2 MVC layer and module
-systems. This application is meant to be used as an example to make RESTful application using Zend Framework 2
-Basically, Zend Framework 2 has support RESTful for controller. But it doesn't support when client send data with json type. Here I add a controller (Api/Mvc/Controller/RestfulController.php) by extend from Zend/Mvc/Controller/AbstractRestfulController.php to solve this case
-Please check the RESTful API documentation here to know the existing API easily http://docs.dollyaswinnet.apiary.io
+systems. This application is meant to be used as an example to make RESTful application using Zend Framework 2.
+
+Basically, Zend Framework 2 has support RESTful for controller. But it doesn't support when client send data with json type. Here I add a controller (Api/Mvc/Controller/RestfulController.php) by extend from Zend/Mvc/Controller/AbstractRestfulController.php to solve this case.
+
+Please check the RESTful API documentation to know the existing API easily http://docs.dollyaswinnet.apiary.io
 
 
 Installation
