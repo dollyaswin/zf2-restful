@@ -1,0 +1,52 @@
+HOST: http://dollyaswin.net
+
+--- dollyaswin.net ---
+---
+This is an example API Documentation. This API is built by Zend Framework 2
+---
+
+--
+Example Zend Framework 2 RESTful API
+The following is a section of resources related to the book collection
+--
+
+
+List books collection
+GET /zf2/public/api/book
+< 200
+< Content-Type: application/json
+{"books":[
+    {"id":"1","isbn":"1234567891","title":"Book 1","publisher":"O\u0027reilly","page":"456","description":"No description"},
+    {"id":"2","isbn":"2345678901234","title":"Book 2","publisher":"Approx","page":"689","description":"Book 2 description"},
+    {"id":"3","isbn":"0987654321","title":"Book 3","publisher":"O\u0027reilly","page":"589","description":"Nothing"}
+    ],
+ "_metadata":{"count":3}
+}
+
+Get book record by pass id. Example id: 1
+GET /zf2/public/api/book/1
+< 200
+< Content-Type: application/json
+{"book": {"id":"1","isbn":"1234567891","title":"Book 1","publisher":"O\u0027reilly","page":"456","description":"No description"}}
+
+Add book record
+POST /zf2/public/api/book
+> Content-Type: application/json
+{"isbn":"1234567891234","title":"Book 4","publisher":"O\u0027reilly","page":"399","description":"Book 4 Description"}
+< 201
+< Content-Type: application/json
+{"book":{"isbn":"1234567891234","title":"Book 4","publisher":"O\u0027reilly","page":"399","description":"Book 4 Description"}}
+
+Update book record by pass id in url. Example id: 1
+PUT /zf2/public/api/book/1
+> Content-Type: application/json
+{"isbn":"1234567891","title":"Book 1","publisher":"O\u0027reilly","page":"499","description":"No description"}
+< 200
+< Content-Type: application/json
+{"book":{"isbn":"1234567891","title":"Book 1","publisher":"O\u0027reilly","page":"499","description":"No description"}}
+
+Delete book by id. Example id: 4
+DELETE /zf2/public/api/book/4
+< 200
+< Content-Type: application/json
+[]
