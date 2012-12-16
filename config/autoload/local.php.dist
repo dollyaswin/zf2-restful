@@ -14,9 +14,9 @@
 return array(
     'db' => array(
         'driver'   => 'Pdo',
-        'dsn'      => 'mysql:dbname=dolly_rest_api;host=localhost',
-        'username' => 'dolly_restapi',
-        'password' => 'ixq8zukalwv5',
+        'dsn'      => 'mysql:dbname=;host=localhost',
+        'username' => '',
+        'password' => '',
         'driver_options' => array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),
