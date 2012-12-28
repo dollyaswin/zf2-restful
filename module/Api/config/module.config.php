@@ -5,6 +5,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Api\Controller\Book'  => 'Api\Controller\BookController',
+            'Api\Controller\Country'  => 'Api\Controller\CountryController',
          ),
     ),
     'router' => array(
